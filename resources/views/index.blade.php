@@ -2,9 +2,7 @@
 
 @section('content')
 <div class="jumbotron text-center">
-  <h1>Welcome to Opara's Blog</h1>
-  <p>
-    {{$tag}}
-  </p>
+  <h1>Welcome to {{config('app.name')}}</h1>
+  <p>Quiclky scaffold your blog</p>
 </div>
 @endsection
