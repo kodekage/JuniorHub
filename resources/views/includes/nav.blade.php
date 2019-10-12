@@ -11,7 +11,7 @@
           <a class="nav-link" href="/about">about <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/blogpost">blogs</a>
+          <a class="nav-link" href="/blogpost">blog post</a>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
