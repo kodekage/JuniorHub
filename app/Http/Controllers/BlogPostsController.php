@@ -14,7 +14,8 @@ class BlogPostsController extends Controller
      */
     public function index()
     {
-       $blogpost = BlogPost::orderBy('title', 'desc')->paginate(1);
+       $blogpost = BlogPost::orderBy('updated_at', 'desc')->get();
+    //    $blogpost = BlogPost::all();
        return view('blogpost.index')->with('post', $blogpost);
     }
 
@@ -25,7 +26,7 @@ class BlogPostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('blogpost.create');
     }
 
     /**
@@ -36,7 +37,19 @@ class BlogPostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title'   => 'required',
+            'author'  => 'required',
+            'content' => 'required'
+        ]);
+        $post = new BlogPost;
+        $post->title = $request->input('title');
+        $post->author = $request->input('author');
+        $post->blogBody = $request->input('content');
+
+        $post->save();
+        
+        return redirect('/blogpost')->with('success', 'New Post Created Successfully');
     }
 
     /**
@@ -59,7 +72,8 @@ class BlogPostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $postID = BlogPost::find($id);
+        return view('blogpost.edit')->with('post', $postID);
     }
 
     /**
@@ -71,7 +85,19 @@ class BlogPostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title'   => 'required',
+            'author'  => 'required',
+            'content' => 'required'
+        ]);
+        $post = BlogPost::find($id);
+        $post->title = $request->input('title');
+        $post->author = $request->input('author');
+        $post->blogBody = $request->input('content');
+
+        $post->save();
+        
+        return redirect("/blogpost/$post->id")->with('success', 'Your post has being successfully updated');
     }
 
     /**
@@ -82,6 +108,9 @@ class BlogPostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $blogpost = BlogPost::find($id);
+        $blogpost->delete();
+
+        return redirect('/blogpost')->with('success', "$blogpost->title Removed");
     }
 }
