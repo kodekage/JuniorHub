@@ -10645,6 +10645,10 @@ a.text-dark:focus {
 }
 
 .margin-down {
-  margin-top: 2em;
+  margin-top: 1em;
+}
+
+#box {
+  background: gray;
 }
 

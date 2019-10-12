@@ -1,11 +1,11 @@
 @extends('layouts.layout')
 
 @section('content')
-  
-<div class="margin-down jumbotron">
-  <h1>
-    BLOG LIST
-  </h1>
+<h1 class="margin-down">
+  ARTICLES
+</h1>
+@include('includes.messages')
+<div>
   @foreach ($post as $blogpost)
     <div>
       <h2>
@@ -14,13 +14,11 @@
         </a>
       </h2>
       <p>
-        {{$blogpost->blogBody}}
+        {!!$blogpost->blogBody!!}
       </p>
       <p>
         Author: {{$blogpost->author}}
       </p>
     </div>
   @endforeach
-  {{$post->links()}}
-</ul>
 @endsection
