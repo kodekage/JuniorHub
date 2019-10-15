@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
   <h1 class="margin-down">
@@ -12,16 +12,12 @@
         {{Form::text('title', $post->title, ['class' => 'form-control', 'placeholder' => 'Post title'])}}
       </div>
       <div class="form-group">
-        {{Form::label('author', 'Post Author')}}
-        {{Form::text('author', $post->author, ['class' => 'form-control', 'placeholder' => 'enter your name'])}}
-      </div>
-      <div class="form-group">
         {{Form::label('content', 'Post Content')}}
         {{Form::textarea('content', $post->blogBody, ['id' => 'article-ckeditor','class' => 'form-control', 'placeholder' => 'tell your story here'])}}
       </div>
       {{Form::hidden('_method', 'PUT')}}
       <div class="form-group">
-        {{Form::submit('Create Post', ['class' => 'btn btn-primary'])}}
+        {{Form::submit('Update Post', ['class' => 'btn btn-primary'])}}
       </div>
     {!! Form::close() !!}
   </div>

@@ -13,5 +13,10 @@
 
 Route::get('/', 'BlogsController@index');
 Route::get('/about', 'BlogsController@about');
+Route::get('/404', 'BlogsController@error');
 
 Route::resource('blogpost', 'BlogPostsController');
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashBoardController@index')->name('dashboard');

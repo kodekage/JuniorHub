@@ -1,7 +1,48 @@
 .margin-down{
- margin-top: 1em; 
+ margin-top: 2em; 
+}
+
+#h1{
+  font-size: 100px;
+  font-weight: bolder;
+  // margin: 2em 0 0;
+  // vertical-align: middle;
 }
 
 #box{
   background: gray;
+}
+
+#error-page{
+  width: 50%;
+  height: 50vh;
+  padding: 5em 0;
+  margin: 0 auto;
+  color: white;
+  border: 20px solid red;
+  border-radius: 20px;
+  background: url(/../images/404.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.row img{
+  max-width: 100%;
+  height: auto;
+}
+
+.row div{
+  // border: 1px solid red;
+  margin: 1em auto;
+}
+
+.btn{
+  padding: .3em 3em;
+}
+
+@media (max-width: 768px){
+  .row img{
+    display: none;
+  }
 }
