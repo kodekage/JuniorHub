@@ -1,7 +1,11 @@
 .margin-down{
- margin-top: 2em; 
+  margin-top: 2em;
+  // color: white;
 }
 
+.card-header{
+  color: white;
+}
 #h1{
   font-size: 100px;
   font-weight: bolder;
@@ -32,10 +36,10 @@
   height: auto;
 }
 
-.row div{
+// .row div{
   // border: 1px solid red;
-  margin: 1em auto;
-}
+  // margin: 1em auto;
+// }
 
 .btn{
   padding: .3em 3em;
@@ -44,6 +48,10 @@
   width: 40px;
   height: 40px;
   border-radius: 100%;
+}
+
+.form-check-label{
+  color: black;;
 }
 
 @media (max-width: 768px){
