@@ -10684,6 +10684,12 @@ a.text-dark:focus {
   padding: 0.3em 3em;
 }
 
+.navbar-brand img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
 @media (max-width: 768px) {
   .row img {
     display: none;
