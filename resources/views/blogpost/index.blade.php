@@ -1,24 +1,18 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
-<h1 class="margin-down">
-  ARTICLES
-</h1>
 @include('includes.messages')
 <div>
   @foreach ($post as $blogpost)
-    <div>
+    <div class="margin-down">
       <h2>
         <a href="/blogpost/{{$blogpost->id}}">
-          Title: {{$blogpost->title}}
+          {{$blogpost->title}}
         </a>
       </h2>
-      <p>
-        {!!$blogpost->blogBody!!}
-      </p>
-      <p>
-        Author: {{$blogpost->author}}
-      </p>
+      <span>
+        written by <strong>{{$blogpost->author}}</strong> on <strong>{{$blogpost->created_at}}</strong>
+      </span>    
     </div>
   @endforeach
 @endsection

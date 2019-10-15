@@ -8,6 +8,16 @@ use App\BlogPost;
 class BlogPostsController extends Controller
 {
     /**
+    * Create a new controller instance.
+    *
+    * @return void
+    */
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -39,13 +49,14 @@ class BlogPostsController extends Controller
     {
         $this->validate($request, [
             'title'   => 'required',
-            'author'  => 'required',
             'content' => 'required'
         ]);
         $post = new BlogPost;
         $post->title = $request->input('title');
-        $post->author = $request->input('author');
+        // $post->author = $request->input('author');
+        $post->author = auth()->user()->name;
         $post->blogBody = $request->input('content');
+        $post->user_id = auth()->user()->id;
 
         $post->save();
         
@@ -73,6 +84,10 @@ class BlogPostsController extends Controller
     public function edit($id)
     {
         $postID = BlogPost::find($id);
+
+        if(auth()->user()->id !== $postID->user_id){
+            return redirect('/404')->with('error', 'You are not authorized to edit that page');
+        }
         return view('blogpost.edit')->with('post', $postID);
     }
 
@@ -87,12 +102,11 @@ class BlogPostsController extends Controller
     {
         $this->validate($request, [
             'title'   => 'required',
-            'author'  => 'required',
             'content' => 'required'
         ]);
         $post = BlogPost::find($id);
         $post->title = $request->input('title');
-        $post->author = $request->input('author');
+        $post->author = auth()->user()->name;
         $post->blogBody = $request->input('content');
 
         $post->save();
