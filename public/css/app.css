@@ -10648,6 +10648,10 @@ a.text-dark:focus {
   margin-top: 2em;
 }
 
+.card-header {
+  color: white;
+}
+
 #h1 {
   font-size: 100px;
   font-weight: bolder;
@@ -10676,10 +10680,6 @@ a.text-dark:focus {
   height: auto;
 }
 
-.row div {
-  margin: 1em auto;
-}
-
 .btn {
   padding: 0.3em 3em;
 }
@@ -10688,6 +10688,10 @@ a.text-dark:focus {
   width: 40px;
   height: 40px;
   border-radius: 100%;
+}
+
+.form-check-label {
+  color: black;
 }
 
 @media (max-width: 768px) {
