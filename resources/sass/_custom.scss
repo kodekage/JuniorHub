@@ -1,15 +1,37 @@
+
+body{
+  position: relative;
+  min-height: 100vh;
+}
 .margin-down{
-  margin-top: 2em;
+  margin-top: 1em;
   // color: white;
+}
+
+div{
+  // border: 1px solid red;
+}
+
+.index{
+  margin: 3em auto 7em;
+}
+.index h1, .index h2{
+  color: $blue-shade-dark;
 }
 
 .card-header{
   color: white;
 }
-#h1{
-  font-size: 100px;
+
+.text-bold{
+  // font-weight: lighter;
+  font-size: 18px;
+}
+
+#h1, .h1{
+  font-size: 60px;
   font-weight: bolder;
-  // margin: 2em 0 0;
+  margin: 0;
   // vertical-align: middle;
 }
 
@@ -31,9 +53,46 @@
   background-repeat: no-repeat;
 }
 
+.card-header img{
+  border-radius: 100%;
+}
+.juniors img{
+  width: 250px;
+  height: 300px;
+  margin: auto;
+  // border-radius: 100%;
+}
 .row img{
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  // height: ;
+}
+.font-dark{
+  color: black;
+  border-bottom: 10px solid $gray-shade;
+  background: rgb(238, 238, 238);
+}
+.profile-image img{
+  width: 100%;
+  height: 300px;
+  margin: auto;
+  // border-radius: 10px;
+  // border: 1px solid rgb(44, 41, 41, 0.4);
+}
+.profile-tab .col{
+  border-bottom: 1px solid $gray-shade;
+  // border-right: .5px solid $gray-shade;
+  // border-left: .5px solid $gray-shade;
+  padding: .5em;
+}
+.profile-tab .col:hover{
+  border-bottom: 3px solid brown;
+  cursor: pointer;
+  font-weight: bold;
+}
+.round-fig{
+  background: rgb(216, 216, 216);
+  border-radius: 100%;
+  padding: .2em .6em;
 }
 
 // .row div{
@@ -44,18 +103,141 @@
 .btn{
   padding: .3em 3em;
 }
-.navbar-brand img{
+.btn-full{
+  width: 100%;
+}
+
+nav img{
   width: 40px;
   height: 40px;
+  // border-radius: 10px;
+}
+
+.nav-item img{
+  width: 35px;
+  height: 35px;
   border-radius: 100%;
+  border: 1px solid white;
+}
+
+.line{
+  // border: 2px soild white;
+  // padding: 2em;
+  background: white;
+  height: 10px;
+  z-index: 3;
+  width: 100px;
+  transform: rotate(90deg);
+  position: relative;
+  left: 28.9%;
 }
 
 .form-check-label{
   color: black;;
 }
 
-@media (max-width: 768px){
-  .row img{
+.about-junior div{
+  margin-top: 1em;
+}
+
+.about-junior img{
+  border-radius: 100%;
+  // border: 10px solid #3F488F;
+  border: 10px solid #555555;
+}
+
+.about-junior h3{
+  color: $blue-shade;
+  font-size: 50px;
+}
+
+.about-junior h4{
+  color: $blue-shade;
+}
+
+.about-junior{
+  padding-bottom: 3em;
+  // background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(0,0,0,1));
+  background: linear-gradient(45deg, #424242, #424242);
+  // border-top: 5px solid rgb(0, 0, 0);
+  color: whitesmoke;
+}
+
+.up-arrow{
+  position: fixed;
+  font-size: 30px;
+  right: .5em;
+  bottom: .5em;
+  padding: 0 .6em 2em;
+  width: 70px;
+  height: 50px;
+  color: white;
+  border-radius: 100%;
+  border: 5px solid white;
+  background: #555555;
+  z-index: 5;
+}
+
+.user{
+  border: 2px solid $gray-shade;
+  border-radius: 20px;
+  padding: 1em 0;
+}
+
+.user-details{
+  border-left: 5px solid $gray-shade;
+}
+
+.user-img img{
+  border: 5px solid $gray-shade;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+}
+
+.user-articles{
+  width: 50%;
+  margin: 1em auto;
+  border: .5px solid $gray-shade;
+  padding: .5em;
+}
+
+.user-articles img{
+  width: 50px;
+  height: 50px;
+  border: 2px solid $gray-shade;
+  border-radius: 100%;
+}
+
+#app{
+  padding-bottom: 50px;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+
+// div{
+  // border: 1px solid transparent;
+// }
+
+@media (max-width: 991px){
+  .hide{
     display: none;
+  }
+  .line{
+    display: none;
+  }
+  .user-articles{
+    width: 90%;
+  }
+  .juniors img{
+    height: 100%;
+  }
+  .profile-image img{
+    width: 300px;
   }
 }
