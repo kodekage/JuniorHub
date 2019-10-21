@@ -6,8 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'laravel-blog-starter') }}</title>
+    <title>@yield('title', 'JuniorHub')</title>
     <link rel="icon" href="{{asset('images/j.jpg')}}">
 
     <!-- Scripts -->
@@ -22,12 +21,12 @@
 </head>
 <body>
     @include('includes.nav')
-    <div id="app" class="container">
+    <div id="app">
         {{-- <main class="py-4"> --}}
             @yield('content')
         {{-- </main> --}}
     </div>
-
+    {{-- @include('includes.footer') --}}
     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script>
         CKEDITOR.replace( 'article-ckeditor' );  
