@@ -1,12 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+<section class="container text-center">
   <h1 class="margin-down">
     Create New Blog Post
   </h1>
   @include('includes.messages')
-  <div class="">
-    {!! Form::open(['action' => 'BlogPostsController@store', 'method' => 'POST']) !!}
+  <div class="row align-items-center justify-content-center text-left">
+    <div class="col-lg-8">
+      {!! Form::open(['action' => 'BlogPostsController@store', 'method' => 'POST']) !!}
       <div class="form-group">
         {{Form::label('title', 'Post Title')}}
         {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Post title'])}}
@@ -22,6 +24,8 @@
       <div class="form-group">
         {{Form::submit('Create Post', ['class' => 'btn btn-primary'])}}
       </div>
-    {!! Form::close() !!}
+      {!! Form::close() !!}
+    </div>
   </div>
+</section>
 @endsection

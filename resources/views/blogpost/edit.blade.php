@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<section class="container">
   <h1 class="margin-down">
     Edit Post
   </h1>
@@ -21,4 +22,5 @@
       </div>
     {!! Form::close() !!}
   </div>
+</section>
 @endsection

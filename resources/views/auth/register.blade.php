@@ -3,11 +3,11 @@
 @section('content')
 <div class="container margin-down">
     <div class="row justify-content-center align-items-center">
-        <div class="col-8 col-lg-8">
-            <img src="{{asset('images/junior.jpg')}}" alt="">
+        <div class="col-8 col-lg-6 hide">
+            <img src="{{asset('images/profile.jpg')}}" alt="">
         </div>
 
-        <div class="col text-left">
+        <div class="col-lg-4 text-left">
             <div class="card">
                 <div class="card-header bg-dark">
                     <h1>{{ __('Register') }}</h1>

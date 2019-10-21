@@ -24,9 +24,8 @@ class BlogPostsController extends Controller
      */
     public function index()
     {
-       $blogpost = BlogPost::orderBy('updated_at', 'desc')->get();
-    //    $blogpost = BlogPost::all();
-       return view('blogpost.index')->with('post', $blogpost);
+       $post = BlogPost::orderBy('updated_at', 'desc')->get();
+       return view('blogpost.index', compact('post'));
     }
 
     /**
@@ -69,10 +68,9 @@ class BlogPostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(BlogPost $blogpost)
     {
-        $blogID = BlogPost::find($id);
-        return view('blogpost.show')->with('post', $blogID);
+        return view('blogpost.show', compact('blogpost'));
     }
 
     /**

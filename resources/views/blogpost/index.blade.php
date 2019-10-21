@@ -2,6 +2,7 @@
 
 @section('content')
 @include('includes.messages')
+<section class="container">
 <div>
   @foreach ($post as $blogpost)
     <div class="margin-down">
@@ -15,4 +16,5 @@
       </span>    
     </div>
   @endforeach
+</section>
 @endsection

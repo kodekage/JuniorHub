@@ -14,7 +14,10 @@
                   <a class="nav-link" href="/about">about <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/blogpost">blogpost</a>
+                  <a class="nav-link" href="/blogpost">articles</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/juniors">juniors</a>
                 </li>
               </ul>
 
@@ -33,11 +36,14 @@
                 @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }} <span class="caret"></span>
+                        <img src="storage/profile_pictures/{{ Auth::user()->profile_picture }}" alt=""> {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/dashboard">
-                                dashboard
+                            <a class="dropdown-item" href="/profile">
+                                profile
+                            </a>
+                        <a class="dropdown-item" href="/profile/{{auth()->user()->id}}">
+                                setting
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();

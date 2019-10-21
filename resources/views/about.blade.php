@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'JuniorHub: About Us')
+
 @section('content')
   <div class="margin-down text-center">
   <p>

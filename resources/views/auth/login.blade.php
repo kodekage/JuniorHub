@@ -3,10 +3,10 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center align-items-center margin-down">
-        <div class="col-8 col-lg-8">
-        <img src="{{asset('images/junior.jpg')}}" alt="">
+        <div class="col-8 col-lg-6 hide">
+        <img src="{{asset('images/job.jpg')}}" alt="">
         </div>
-        <div class="col">
+        <div class="col-lg-4">
             <div class="card">
                 <div class="card-header bg-dark">
                     <h1>{{ __('Login') }}</h1>
