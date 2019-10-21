@@ -11,12 +11,18 @@
 |
 */
 
-Route::get('/', 'BlogsController@index');
-Route::get('/about', 'BlogsController@about');
-Route::get('/404', 'BlogsController@error');
+Route::view('/', 'index');
+Route::view('/about', 'about');
+Route::view('/404', '404');
 
 Route::resource('blogpost', 'BlogPostsController');
 
 Auth::routes();
 
-Route::get('/dashboard', 'DashBoardController@index')->name('dashboard');
+// Route::get('/dashboard', 'DashBoardController@index')->name('dashboard');
+
+Route::get('/juniors', 'UsersController@index');
+Route::get('/juniors/{user}', 'UsersController@show');
+Route::get('/profile', 'UsersController@profile');
+Route::get('/profile/{user}', 'UsersController@edit');
+Route::put('/profile/{id}', 'UsersController@update');
