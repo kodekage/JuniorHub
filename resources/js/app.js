@@ -20,6 +20,7 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('profile-board', require('./components/ProfileBoardComponent.vue').default);
+Vue.component('profile-detail', require('./components/ProfileDetailsComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
