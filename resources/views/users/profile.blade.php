@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- {{$user->name}} --}}
-    <div class="container-fluid margin-down">
+    <div id="root" class="container-fluid margin-down">
         <div class="row justify-content-around">
             <div class="col-lg-3">
                 <div class="text-center profile-image">
@@ -21,19 +21,9 @@
                 </div>
             </div>
 
-            <div class="col-lg-8 ">
-                <div class="row align-items-center justify-content-between profile-tab">
-                    <div class="col">
-                        Overiview
-                    </div>
-                    <div class="col">
-                        Projects
-                    </div>
-                    <div class="col">
-                        Posts <mark class="round-fig">  {{count($user->blogpost)}}</mark>
-                    </div>
-                </div>
-            </div>
+        <profile-board title="{{ count($user->blogpost) }}"></profile-board>
         </div>
     </div>
+
+    <script src="{{ asset('js/app.js') }}"></script>
 @endsection
