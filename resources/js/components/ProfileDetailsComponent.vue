@@ -9,9 +9,10 @@
               <p>{{ JSON.parse(user).email }}</p>
           </div>
       </div>
-      <!-- <div class="card-body"> -->
-      <!-- <a href="/profile/" class="btn btn-full btn-dark">edit profile</a> -->
-      <!-- </div> -->
+
+      <div class="card-body" v-if=" guest !== JSON.parse(user).name">
+      <a href="#" class="btn btn-full btn-dark">follow</a></a>
+      </div>
     </div>
   </div>
 </template>
@@ -24,6 +25,11 @@ export default {
     },
     user: {
       required: true
+    }
+  },
+  data(){
+    return {
+      guest: JSON.parse(this.user).name
     }
   }
 }
