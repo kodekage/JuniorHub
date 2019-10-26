@@ -9,9 +9,9 @@
               <p>{{ JSON.parse(user).email }}</p>
           </div>
       </div>
-      <!-- {{-- <div class="card-body"> --}} -->
-          <!-- {{-- <a href="/profile/{{$user->id}}" class="btn btn-full btn-dark">edit profile</a> --}} -->
-      <!-- {{-- </div> --}} -->
+      <!-- <div class="card-body"> -->
+      <!-- <a href="/profile/" class="btn btn-full btn-dark">edit profile</a> -->
+      <!-- </div> -->
     </div>
   </div>
 </template>
