@@ -39,7 +39,7 @@
                         <img src="storage/profile_pictures/{{ Auth::user()->profile_picture }}" alt=""> {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu bg-dark dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/profile">
+                            <a class="dropdown-item" href="/profile/#/overview">
                                 profile
                             </a>
                         <a class="dropdown-item" href="/profile/{{auth()->user()->id}}">
