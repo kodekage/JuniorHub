@@ -4,9 +4,13 @@
     <div class="col card">
       <div class="card-body">
         <h2>About</h2>
-        <p>
-          <!-- @{{ user }}  -->
-        </p>
+        <h3>
+          {{ JSON.parse(user).full_name }} 
+        </h3>
+        <span>@{{ JSON.parse(user).name }}</span><br/>
+        <span>
+          <strong>Github:</strong> {{ JSON.parse(user).github_url }} 
+        </span>
       </div>
     </div>
 
