@@ -10695,18 +10695,31 @@ body {
   background-repeat: no-repeat;
 }
 
+.row img {
+  width: 100%;
+}
+
 .card-header img {
   border-radius: 100%;
 }
 
 .juniors img {
   width: 250px;
-  height: 300px;
-  margin: auto;
+  height: 250px;
+  border: 5px solid snow;
+  border-radius: 100%;
+  position: relative;
+  top: 5em;
 }
 
-.row img {
-  width: 100%;
+.juniors .card {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(/images/code.jpeg?472ddb3d714f5877658352dff625c667);
+  background-position: center;
+  background-size: cover;
+}
+
+.juniors .card-body {
+  padding-top: 5em;
 }
 
 .font-dark {
@@ -10864,10 +10877,6 @@ footer {
 
   .user-articles {
     width: 90%;
-  }
-
-  .juniors img {
-    height: 100%;
   }
 
   .profile-image img {
