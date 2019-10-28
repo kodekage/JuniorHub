@@ -8,9 +8,9 @@ body{
   // color: white;
 }
 
-div{
+// div{
   // border: 1px solid red;
-}
+// }
 
 .index{
   margin: 3em auto 7em;
@@ -53,19 +53,29 @@ div{
   background-repeat: no-repeat;
 }
 
+.row img{
+  width: 100%;
+}
 .card-header img{
   border-radius: 100%;
 }
 .juniors img{
   width: 250px;
-  height: 300px;
-  margin: auto;
-  // border-radius: 100%;
+  height: 250px;
+  border: 5px solid snow;
+  border-radius: 100%;
+  position: relative;
+  top: 5em;
 }
-.row img{
-  width: 100%;
-  // height: ;
+.juniors .card{
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('../images/code.jpeg');
+  background-position: center;
+  background-size: cover;
 }
+.juniors .card-body{
+  padding-top: 5em;
+}
+
 .font-dark{
   color: black;
   border-bottom: 10px solid $gray-shade;
@@ -233,9 +243,6 @@ footer{
   }
   .user-articles{
     width: 90%;
-  }
-  .juniors img{
-    height: 100%;
   }
   .profile-image img{
     width: 300px;

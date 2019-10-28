@@ -2015,6 +2015,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['user'],
   mounted: function mounted() {
@@ -38297,52 +38301,82 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "row margin-down" }, [
+    _c("div", { staticClass: "col card" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c("h2", [_vm._v("About")]),
+        _vm._v(" "),
+        _c("h3", [
+          _vm._v(
+            "\n        " + _vm._s(JSON.parse(_vm.user).full_name) + " \n      "
+          )
+        ]),
+        _vm._v(" "),
+        _c("span", [_vm._v("@" + _vm._s(JSON.parse(_vm.user).name))]),
+        _c("br"),
+        _vm._v(" "),
+        _c("span", [
+          _c("strong", [_vm._v("Github:")]),
+          _vm._v(" " + _vm._s(JSON.parse(_vm.user).github_url) + " \n      ")
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _vm._m(2),
+    _vm._v(" "),
+    _vm._m(3)
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row margin-down" }, [
-      _c("div", { staticClass: "col card" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("h2", [_vm._v("About")]),
-          _vm._v(" "),
-          _c("p")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col card" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("h2", [_vm._v("Technology Stack")]),
-          _vm._v(" "),
-          _c("p")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-12 card" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("h2", [_vm._v("Activity")]),
-          _vm._v(" "),
-          _c("p")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col card" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("h2", [_vm._v("Job listing")]),
-          _vm._v(" "),
-          _c("p")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col card" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("h2", [_vm._v("Job listing")]),
-          _vm._v(" "),
-          _c("p")
-        ])
+    return _c("div", { staticClass: "col card" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c("h2", [_vm._v("Technology Stack")]),
+        _vm._v(" "),
+        _c("p")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12 card" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c("h2", [_vm._v("Activity")]),
+        _vm._v(" "),
+        _c("p")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col card" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c("h2", [_vm._v("Job listing")]),
+        _vm._v(" "),
+        _c("p")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col card" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c("h2", [_vm._v("Job listing")]),
+        _vm._v(" "),
+        _c("p")
       ])
     ])
   }

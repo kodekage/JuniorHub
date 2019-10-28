@@ -2,10 +2,10 @@
 
 @section('content')
   <section class="container margin-down">
-    <div class="row align-items-center juniors justify-content-center">
+    <div class="row align-items-center juniors justify-content-left">
       @foreach ($users as $user)
-      <div class="col-lg-4">
-        <div class="card">
+      <div class="col-lg-4 margin-down">
+        <div class="card text-center">
           {{-- <div class="card-header bg-light"> --}}
           <a href="/juniors/{{$user->id}}/#/overview">
           <img src="{{asset("storage/profile_pictures/$user->profile_picture")}}" alt="{{$user->name}} photo">
