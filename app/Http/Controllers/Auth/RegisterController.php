@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    protected $redirectTo = '/profile/#/overview';
 
     /**
      * Create a new controller instance.
@@ -67,6 +67,9 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'full_name' => '',
+            'github_url' => '',
+            'profile_picture' => 'no_image.jpg'
         ]);
     }
 }
