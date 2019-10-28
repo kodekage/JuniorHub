@@ -3,17 +3,21 @@
     <!-- <h2>Posts</h2> -->
       <div class="row">
         <div class="col-lg-6 margin-down" v-for="post in user_post" :key="post.id">
-        <div class="card">
-          <div class="card-body profile-post">
-            <a href="#">
-              <h2>{{ post.title }}</h2>
-            </a>
+          <div class="card">
+            <div class="card-body profile-post">
+              <a href="#">
+                <h2>{{ post.title }}</h2>
+              </a>
 
-            <span> <strong>Written:</strong> {{ post.created_at }}</span>
+              <span> <strong>Written:</strong> {{ post.created_at }}</span>
+            </div>
           </div>
-        </div>
-    </div>
       </div>
+
+      <div class="col-lg-6 margin-down" v-if="user_post.length < 1">
+        <h2>No Post</h2>
+      </div>
+    </div>
   <!-- </div> -->
 </template>
 

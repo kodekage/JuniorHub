@@ -2060,6 +2060,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['user_post']
 });
@@ -38405,23 +38409,35 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "row" },
-    _vm._l(_vm.user_post, function(post) {
-      return _c("div", { key: post.id, staticClass: "col-lg-6 margin-down" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-body profile-post" }, [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("h2", [_vm._v(_vm._s(post.title))])
-            ]),
-            _vm._v(" "),
-            _c("span", [
-              _c("strong", [_vm._v("Written:")]),
-              _vm._v(" " + _vm._s(post.created_at))
+    [
+      _vm._l(_vm.user_post, function(post) {
+        return _c(
+          "div",
+          { key: post.id, staticClass: "col-lg-6 margin-down" },
+          [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-body profile-post" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("h2", [_vm._v(_vm._s(post.title))])
+                ]),
+                _vm._v(" "),
+                _c("span", [
+                  _c("strong", [_vm._v("Written:")]),
+                  _vm._v(" " + _vm._s(post.created_at))
+                ])
+              ])
             ])
+          ]
+        )
+      }),
+      _vm._v(" "),
+      _vm.user_post.length < 1
+        ? _c("div", { staticClass: "col-lg-6 margin-down" }, [
+            _c("h2", [_vm._v("No Post")])
           ])
-        ])
-      ])
-    }),
-    0
+        : _vm._e()
+    ],
+    2
   )
 }
 var staticRenderFns = []
