@@ -1,7 +1,7 @@
 <template>
   <div class="col-lg-3">
     <div class="text-center profile-image">
-      <img :src="image" alt="profile image">
+      <img :src="image.profile_picture" alt="profile image">
       <div class="card-header font-dark text-center">
           <div>
               <h2>{{ JSON.parse(user).full_name }} </h2>

@@ -19,7 +19,7 @@ Route::resource('blogpost', 'BlogPostsController');
 
 Auth::routes();
 
-// Route::get('/dashboard', 'DashBoardController@index')->name('dashboard');
+//Route::get('/dashboard', 'DashBoardController@index')->name('dashboard');
 
 Route::get('/juniors', 'UsersController@index');
 Route::get('/juniors/{user}', 'UsersController@show');
