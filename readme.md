@@ -4,7 +4,8 @@ JuniorHub is an open source writer community for Junior developers with the prom
 them scale to senior level one keystroke at a time.
 
 ## Testing Locally
-- Clone the repo by running `$ git clone https://github.com/OPARA-PROSPER/JuniorHub.git`
+- Fork this repository
+- Clone your forked repo by running `$ git clone https://github.com/<your-user-name>/JuniorHub.git`
 - Navigate to the directory `$ cd /path/to/JuniorHub.`
 - copy .env.example to .env .
 - Add your local database details to the `.env`
