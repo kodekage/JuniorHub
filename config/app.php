@@ -15,6 +15,9 @@ return [
 
     'name' => env('APP_NAME', 'JuniorHub'),
 
+    // log errors
+    'log' => 'errorlog',
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
