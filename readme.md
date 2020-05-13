@@ -1,7 +1,7 @@
 ## JuniorHub
 
 JuniorHub is an open source writer community for Junior developers with the promise of helping
-them scale to senior level on a keystroke at a time.
+them scale to senior level one keystroke at a time.
 
 
 ## Testing Locally
