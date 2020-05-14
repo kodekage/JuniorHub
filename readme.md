@@ -14,7 +14,7 @@ them scale to senior level one keystroke at a time.
     - `$ php artisan key:generate`
     - `$ php artisan config:cache`
     - `$ php artisan migrate` 
-    - `>php artisan storage:link`
+    - `$ php artisan storage:link`
     - `$ php artisan serve`
 - Open your browser tab and load the application on port 8000: `localhost:8000`
 
